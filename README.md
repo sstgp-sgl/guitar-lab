@@ -15,6 +15,22 @@ streamlit run app.py
 
 打开终端显示的本地地址。基础功能在本地计算，不需要 API key 或 AI 服务。
 
+## 分享给别人使用（无需写代码）
+
+项目可以免费部署到 Streamlit Community Cloud。部署一次后，会得到一个网页链接；其他人打开链接即可使用，不必安装 Python。代码有更新并推送到 GitHub 后，网页会自动重新部署。
+
+首次部署按以下步骤操作：
+
+1. 打开 [share.streamlit.io](https://share.streamlit.io/)，使用 GitHub 登录，并授权 Streamlit 访问 GitHub。
+2. 点击 **Create app**，选择 **Yup, I have an app**。
+3. 填写仓库 `sstgp-sgl/guitar-lab`，分支选 `main`，主文件填 `app.py`。
+4. 可选填写一个网址名称，然后点击 **Deploy**。
+5. 等待首次构建完成，复制页面提供的 `*.streamlit.app` 链接分享给他人。
+
+公开 GitHub 仓库部署的应用默认公开。若希望只有特定人能访问，可以在 Streamlit 应用设置中管理访问权限。部署平台会从仓库根目录的 `requirements.txt` 安装依赖；本项目网页不需要配置 API key、数据库或额外密钥。
+
+之后更新网页：代码提交并推送到 GitHub 的 `main` 分支，Community Cloud 会自动检测并重新部署。普通使用者只需要网页链接；只有维护项目的人需要 GitHub 权限。
+
 ## 第二版
 
 - **和弦音位置**：输入 `C`、`Am`、`G7`、`Bbmaj7` 等，显示构成音、相对根音的半音距离，以及指板上的对应位置。
